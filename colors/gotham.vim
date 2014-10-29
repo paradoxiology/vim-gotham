@@ -70,8 +70,8 @@ let s:colors = {}
 " Base colors.
 let s:colors.base0 = { 'gui': '#0c1014', 'cterm': 0 }
 let s:colors.base1 = { 'gui': '#11151c', 'cterm': 8 }
-let s:colors.base2 = { 'gui': '#091f2e', 'cterm': 10 }
-let s:colors.base3 = { 'gui': '#0a3749', 'cterm': 12 }
+let s:colors.base2 = { 'gui': '#091f2e', 'cterm': 233 }
+let s:colors.base3 = { 'gui': '#0a3749', 'cterm': 18 }
 let s:colors.base4 = { 'gui': '#245361', 'cterm': 11 }
 let s:colors.base5 = { 'gui': '#599cab', 'cterm': 14 }
 let s:colors.base6 = { 'gui': '#99d1ce', 'cterm': 7 }
@@ -91,14 +91,14 @@ let s:colors.green   = { 'gui': '#2aa889', 'cterm': 2  }
 " Native highlighting ==========================================================
 
 let s:background = 'base0'
-let s:linenr_background = 'base1'
+let s:linenr_background = 'base2'
 
 " Everything starts here.
 call s:Col('Normal', 'base6', s:background)
 
 " Line, cursor and so on.
 call s:Col('Cursor', 'base1', 'base6')
-call s:Col('CursorLine', '', 'base1')
+call s:Col('CursorLine', '', 'base2')
 call s:Col('CursorColumn', '', 'base1')
 
 " Sign column, line numbers.
