@@ -57,6 +57,11 @@ function! s:Attr(group, attr)
   call s:Highlight(l:attrs)
 endfunction
 
+function! s:Attrs(group, attrs)
+  let l:attrs = insert(a:attrs, a:group, 0)
+  call s:Highlight(l:attrs)
+endfunction
+
 function! s:Clear(group)
   exec 'highlight clear ' . a:group
 endfunction
@@ -186,6 +191,10 @@ call s:Col('SpellBad', 'base7', 'red')
 call s:Col('SpellCap', 'base7', 'blue')
 call s:Col('SpellLocal', 'yellow')
 call s:Col('SpellRare', 'base7', 'violet')
+
+" Add a little squiggly flares to the spelling errors
+call s:Attrs('SpellBad', ['cterm=underline', 'gui=undercurl'])
+call s:Attrs('SpellCap', ['cterm=underline', 'gui=undercurl'])
 
 " Diffing.
 call s:Col('DiffAdd', 'base7', 'green')
